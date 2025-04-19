@@ -1,5 +1,6 @@
 services:
   backend:
+    image: mk09000/chatapp-backend:latest
     build:
       context: ./backend
       dockerfile: Dockerfile
@@ -14,6 +15,7 @@ services:
       - chatapp-network
 
   frontend:
+    image: mk09000/chatapp-frontend:latest
     build:
       context: ./frontend
       dockerfile: Dockerfile
