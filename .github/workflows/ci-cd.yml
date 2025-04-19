@@ -37,11 +37,11 @@ jobs:
             ${{ runner.os }}-docker-
 
       - name: Build Docker Images
-        run: docker-compose build
+        run: docker compose build
+
 
       - name: Run Containers
-        run: docker-compose up -d
-
+        run: docker compose up -d
       - name: Wait for services to stabilize
         run: sleep 15
 
@@ -49,8 +49,7 @@ jobs:
         run: docker ps
 
       - name: Stop Containers
-        run: docker-compose down
-
+        run: docker compose down
       - name: Login to DockerHub
         uses: docker/login-action@v2
         with:
