@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+
 dist
 dist-ssr
 *.local
@@ -24,3 +25,15 @@ dist-ssr
 *.sw?
 
 backend/.env
+
+# ...existing code...
+
+# Nagios runtime files
+nagios/var/*
+!nagios/var/.gitkeep
+nagios/etc/nagios.cfg
+
+# Documentation files
+INTERVIEW_GUIDE.md
+nagios.md
+puppet.md
